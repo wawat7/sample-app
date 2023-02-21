@@ -4,6 +4,7 @@
   "description": "sample app",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon app/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/wawat7/sample-app/issues"
   },
-  "homepage": "https://github.com/wawat7/sample-app#readme"
+  "homepage": "https://github.com/wawat7/sample-app#readme",
+  "dependencies": {
+    "bni-nodejs": "^0.1.5",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20"
+  }
 }
