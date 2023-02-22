@@ -8,6 +8,18 @@
       "name": "cd backend",
       "command": "cd backend",
       "runAtStart": true
+    },
+    "npm install": {
+      "name": "npm install",
+      "command": "npm install"
+    },
+    "cd backend && npm install && npm run start": {
+      "name": "cd backend && npm install && npm run start",
+      "command": "cd backend && npm install && npm run start"
+    },
+    "cd frontend && npm install && npm run start": {
+      "name": "cd frontend && npm install && npm run start",
+      "command": "cd frontend && npm install && npm run start"
     }
   }
 }
