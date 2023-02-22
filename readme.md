@@ -43,15 +43,15 @@ npm start
 
 
 #### Frontend
-1. go to frontend
-2. create new file .env
-3. content .env same with .env.example
-4. modify .env with backend url
-5. install dependency : 
+1. Go to frontend
+2. Create new file .env
+3. Content .env same with .env.example
+4. Modify .env with backend url
+5. Install dependency : 
 ```javascript
 npm install
 ```
-6. run your application frontend : 
+6. Run your application frontend : 
 ```javascript
 npm start
 ```
