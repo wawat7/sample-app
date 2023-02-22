@@ -1,14 +1,17 @@
 import { Button, Card, Space, Typography } from 'antd'
 import React, { useState } from 'react'
+import { useDispatch } from "react-redux"
 import MainLayout from '../../components/MainLayout'
 import BNICard from "../../assets/images/bni-debit-card.jpg"
+import { getBalance } from '../../stores/actions/one-gate-payment'
 
 const { Title } = Typography
 const GetBalance = () => {
+    const dispatch = useDispatch()
     const [hit, setHit] = useState(false)
     const money = 1000000
     const onGetBalance = () => {
-        setHit(true)
+        dispatch(getBalance())
     }
     const clear = () => {
         setHit(false)
