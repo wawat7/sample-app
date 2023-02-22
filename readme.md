@@ -56,3 +56,28 @@ npm install
 npm start
 ```
  
+ ## How to use this app with Stackblitz
+
+1. Go to [Stackblitz BNI](https://stackblitz.com/edit/node-pfsuml)
+2. run command : 
+```javascript
+npm start
+```
+3. create new terminal
+4. Go to folder backend :
+```shell
+cd backend
+```
+5. setup file .env with your **credential BNI**
+5. run backend :
+```javascript
+npm start
+```
+6. copy url at preview
+7. Go to folder frontend
+8. Setup file .env with backend base url **(paste url backend here)**
+9. Stop terminal **(terminal firsttime)**
+10. Re-run application
+```javascript
+npm start
+```
