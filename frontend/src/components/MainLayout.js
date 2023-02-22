@@ -1,6 +1,5 @@
 import { Layout } from 'antd'
 import React from 'react'
-import Footers from './Footer'
 import Headers from './Header'
 import 'antd/dist/reset.css';
 import "../styles/main.css"
@@ -11,7 +10,6 @@ const MainLayout = ({ children }) => {
         <Layout className="layout">
             <Headers />
             <Content className="layout-content">{children}</Content>
-            <Footers />
         </Layout>
     )
 }

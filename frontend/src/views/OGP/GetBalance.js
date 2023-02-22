@@ -1,35 +1,46 @@
-import { Button, Card, Space, Typography } from 'antd'
-import React, { useState } from 'react'
-import { useDispatch } from "react-redux"
+import { Button, Card, message, Space, Typography } from 'antd'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 import MainLayout from '../../components/MainLayout'
 import BNICard from "../../assets/images/bni-debit-card.jpg"
-import { getBalance } from '../../stores/actions/one-gate-payment'
+import { getBalance, resetGetBalance } from '../../stores/actions/one-gate-payment'
 
 const { Title } = Typography
 const GetBalance = () => {
     const dispatch = useDispatch()
-    const [hit, setHit] = useState(false)
-    const money = 1000000
+    const { data, isLoading, success, error } = useSelector(state => state.get_balance)
+    const [messageApi, contextHolder] = message.useMessage();
     const onGetBalance = () => {
         dispatch(getBalance())
     }
     const clear = () => {
-        setHit(false)
+        dispatch(resetGetBalance())
     }
+    useEffect(() => {
+        if(error){
+            messageApi.open({
+                type: 'error',
+                content: `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}`,
+            });
+        }
+    })
+    
     return (
         <MainLayout>
+            {contextHolder}
             <div style={cardContent}>
                 <Card
                 title="Get Balance"
                 hoverable
+                loading={isLoading}
                 cover={<img alt="bni-debit-card" src={BNICard} style={imgCard}/>}
                 style={{
                     width: 300,
                     textAlign: "center"
                 }}>
                     <Space direction="vertical">
-                        <Title level={3}>Rp. {!hit ? 0 : money.toLocaleString()} </Title>
-                        {!hit ? <Button onClick={onGetBalance}>Get Balance</Button> : <Button onClick={clear}>Clear</Button>}
+                        <Title level={3}>Rp. {!success ? 0 : parseInt(data.getBalanceResponse?.parameters?.accountBalance).toLocaleString()} </Title>
+                        {!success ? <Button onClick={onGetBalance}>Get Balance</Button> : <Button onClick={clear}>Clear</Button>}
                     </Space>
                 </Card>
             </div>
