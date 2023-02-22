@@ -16,6 +16,9 @@
     "bugs": {
       "url": "https://github.com/wawat7/sample-app/issues"
     },
-    "homepage": "https://github.com/wawat7/sample-app#readme"
+    "homepage": "https://github.com/wawat7/sample-app#readme",
+    "stackblitz": {
+      "startCommand": "npm start"
+    }
   }
   
