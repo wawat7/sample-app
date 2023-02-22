@@ -1,6 +1,7 @@
 import { Layout, Menu } from 'antd'
 import React, { useState } from 'react'
-import { SettingOutlined } from '@ant-design/icons';
+import { Link } from "react-router-dom"
+import { SettingOutlined, FileOutlined } from '@ant-design/icons';
 import logoBNI from "../assets/images/bni.png"
 
 const { Header } = Layout
@@ -8,24 +9,15 @@ const Headers = () => {
     const [current, setCurrent] = useState("ogp")
     const items = [
         {
-            label: 'One Gate Payment',
+            label: <Link to={"/"}>One Gate Payment</Link>,
             key: 'ogp',
             icon: <SettingOutlined />,
-            children: [
-                {
-                    key: "get_balance",
-                    label: "Get Balance"
-                },
-                {
-                    key: "do_payment",
-                    label: "Do Payment"
-                },
-                {
-                    key: "get_payment_status",
-                    label: "Get Payment Status"
-                }
-            ]
         },
+        {
+            label: <Link to={"/documentation"}>Documentation</Link>,
+            key: 'documentation',
+            icon: <FileOutlined />
+        }
     ]
     const clickedMenu = (e) => {
         setCurrent(e.key)
