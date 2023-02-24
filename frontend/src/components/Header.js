@@ -9,12 +9,12 @@ const Headers = () => {
     const [current, setCurrent] = useState("ogp")
     const items = [
         {
-            label: <Link to={"/"}>One Gate Payment</Link>,
+            label: <Link to={"/dashboard"}>One Gate Payment</Link>,
             key: 'ogp',
             icon: <SettingOutlined />,
         },
         {
-            label: <Link to={"/documentation"}>Documentation</Link>,
+            label: <Link to={"/"}>Documentation</Link>,
             key: 'documentation',
             icon: <FileOutlined />
         }

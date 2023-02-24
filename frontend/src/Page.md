@@ -3,9 +3,35 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+~~~css
+h1 {
+  color: red;
+}
+~~~
 
 In the project directory, you can run:
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
 
+* Lists
+* [ ] todo
+* [x] done
+
+:::main{#readme}
+
+Lorem:br
+ipsum.
+
+::hr{.red}
+
+A :i[lovely] language know as :abbr[HTML]{title="HyperText Markup Language"}.
+
+:::
+
+**Note**
+This is a note
+
+**Warning**
+This is a warning
 ### `npm start`
 
 Runs the app in the development mode.\

@@ -1,5 +1,9 @@
+import { Card } from 'antd';
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm"
+import remarkDirective from 'remark-directive'
+import remarkHighlightjs from 'remark-highlight.js'
 import MainLayout from '../../components/MainLayout';
 import readmeFile from "../../Page.md"
 
@@ -15,14 +19,25 @@ const Markdown = () => {
     return (
         <MainLayout>
             <div style={markdownStyle}>
-                <ReactMarkdown children={content} />,
+                <Card
+                    title="Documentation"
+                    bordered={false}
+                    hoverable
+                    style={{
+                    width: "80vw",
+                    }}
+                >
+                    <ReactMarkdown children={content} remarkPlugins={[remarkGfm, remarkDirective, remarkHighlightjs]}/>,
+                </Card>
             </div>
         </MainLayout>
     )
 }
 
 const markdownStyle = {
-    margin: "20px"
+    margin: "40px 30px",
+    display: "flex",
+    justifyContent: "center",
 }
 
 export default Markdown;
