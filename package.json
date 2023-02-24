@@ -1,0 +1,24 @@
+{
+    "name": "sample-app",
+    "version": "1.0.0",
+    "description": "sample app",
+    "main": "server.js",
+    "scripts": {
+      "start": "cd frontend && npm install && npm run start",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/wawat7/sample-app.git"
+    },
+    "author": "BNI",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/wawat7/sample-app/issues"
+    },
+    "homepage": "https://github.com/wawat7/sample-app#readme",
+    "stackblitz": {
+      "startCommand": "npm start"
+    }
+  }
+  
