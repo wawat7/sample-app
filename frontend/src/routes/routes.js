@@ -4,11 +4,11 @@ import GetBalance from "../views/OGP/GetBalance";
 
 const routes = [
     {
-        path: "/",
+        path: "/dashboard",
         element: <GetBalance />
     },
     {
-        path: "/documentation",
+        path: "/",
         element: <Markdown />
     }
 ]

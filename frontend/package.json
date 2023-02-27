@@ -16,6 +16,9 @@
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.2.2",
+    "remark-directive": "^2.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-highlight.js": "^7.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
