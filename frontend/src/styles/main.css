@@ -19,3 +19,8 @@
 .layout-content{
 
 }
+
+/* Card Documentation */
+img{
+    max-width: -webkit-fill-available;
+}
