@@ -24,3 +24,18 @@
 img{
     max-width: -webkit-fill-available;
 }
+
+blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
+
+code {
+    background: #FCF3E5;
+    color: #D16223;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
+}
