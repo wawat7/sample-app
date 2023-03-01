@@ -20,7 +20,7 @@ const GetBalance = () => {
         if(error){
             messageApi.open({
                 type: 'error',
-                content: `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}`,
+                content: data ? `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}` : `Run Backend API First`,
             });
         }
     })

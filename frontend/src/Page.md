@@ -2,7 +2,7 @@
 
 Welcome to BNI API Portal interactive sample apps. We are thrilled to have you as a new user. Our API Portal provides access to a wide range of financial services and resources, and we are excited to see how you will utilize them in your own projects.
 
-Please feel free to reach out to our support team by email to bni.dgl.apm@gmail.com if you have any questions or concerns as you get started with our platform. We are committed to providing the best possible experience for our users, and we look forward to seeing the innovative and creative ways in which you will use our resources to achieve your goals. Thank you for choosing BNI API Portal!
+Please feel free to reach out to our support team by email to apisupport@bni.co.id if you have any questions or concerns as you get started with our platform. We are committed to providing the best possible experience for our users, and we look forward to seeing the innovative and creative ways in which you will use our resources to achieve your goals. Thank you for choosing BNI API Portal!
 
 ## One Gate Payment Interactive Apps
 
@@ -14,9 +14,10 @@ In addition to simulating the one gate payment feature, this sample app also inc
 
 _Before running the sample app, please ensure that you have registered on our API Portal website and created a sample application. This will allow you to generate a secret key that is required to authenticate your API requests._
 
+
 ### ✅ How to register application in BNI Portal
 
-1. Open [https://digitalservices.bni.co.id/en/](https://digitalservices.bni.co.id/en/) , click `Register/Login` , and `Register Here`
+1. Open [https://digitalservices.bni.co.id/en/](https://digitalservices.bni.co.id/en/) , click `Register/Login` , and ```Register Here```
 2. Fill all the information and click `Sign Up`
 3. After email is verified, click Application from menu and create application
 

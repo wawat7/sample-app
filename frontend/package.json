@@ -13,12 +13,16 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.2.2",
+    "rehype-highlight": "^6.0.0",
     "remark-directive": "^2.0.1",
     "remark-gfm": "^3.0.1",
     "remark-highlight.js": "^7.0.1",
+    "remark-html": "^15.0.2",
+    "remark-unwrap-images": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
