@@ -8,9 +8,7 @@ function* getBalance() {
     try {
         const response = yield call(getBalanceOGP);
         yield call(delay, 1200)
-        response.message === "success" ? 
-        yield put(getBalanceSuccess(response)) : 
-        yield put(getBalanceFailed(response))
+        response.message === "success" ? yield put(getBalanceSuccess(response)) : yield put(getBalanceFailed(response))
         yield call(delay, 5000)
         yield put(removeGetBalanceFailed())
     } catch (error) {
