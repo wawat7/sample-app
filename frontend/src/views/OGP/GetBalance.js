@@ -9,11 +9,11 @@ import { getBalanceStackblitz, removeGetBalanceFailedStackblitz } from '../../st
 const { Title } = Typography
 const GetBalance = () => {
     const dispatch = useDispatch()
-    const { data, isLoading, success, error } = useSelector(state => state.get_balance)
+    const { data, isLoading, success, error, messageResponse } = useSelector(state => state.get_balance)
     const [messageApi, contextHolder] = message.useMessage();
     const isStackblitz = process.env.REACT_APP_ENV_STACKBLITZ
     const onGetBalance = () => {
-        isStackblitz ? dispatch(getBalanceStackblitz()) : dispatch(getBalance())
+        isStackblitz === true ? dispatch(getBalanceStackblitz()) : dispatch(getBalance())
     }
     const clear = () => {
         dispatch(resetGetBalance())
@@ -22,9 +22,9 @@ const GetBalance = () => {
         if(error){
             messageApi.open({
                 type: 'error',
-                content: data ? `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}` : `Run Backend API First`,
+                content: data ? messageResponse === "Unauthorized" ? `${data.error}` : `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}` : `Run Backend API First`,
             })
-            .then(isStackblitz && dispatch(removeGetBalanceFailedStackblitz()));
+            .then(isStackblitz && dispatch(removeGetBalanceFailedStackblitz())); 
         }
     })
     

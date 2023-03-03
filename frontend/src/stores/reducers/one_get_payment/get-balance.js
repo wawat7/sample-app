@@ -3,6 +3,7 @@ import * as STACKBLITZ from "../../action_types/stackblitz"
 
 const initialState = {
     data: [],
+    messageResponse: null,
     isLoading: false,
     success: false,
     error: false
@@ -31,6 +32,7 @@ const get_balance = (state = initialState, action) =>  {
             return {
                 ...state,
                 data: action.payload.data,
+                messageResponse: action.payload.message,
                 isLoading: false,
                 error: true
             }
