@@ -13,7 +13,7 @@ const GetBalance = () => {
     const [messageApi, contextHolder] = message.useMessage();
     const isStackblitz = process.env.REACT_APP_ENV_STACKBLITZ
     const onGetBalance = () => {
-        isStackblitz === true ? dispatch(getBalanceStackblitz()) : dispatch(getBalance())
+        isStackblitz === 'true' ? dispatch(getBalanceStackblitz()) : dispatch(getBalance())
     }
     const clear = () => {
         dispatch(resetGetBalance())
@@ -24,7 +24,7 @@ const GetBalance = () => {
                 type: 'error',
                 content: data ? messageResponse === "Unauthorized" ? `${data.error}` : `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}` : `Run Backend API First`,
             })
-            .then(isStackblitz && dispatch(removeGetBalanceFailedStackblitz())); 
+            .then(isStackblitz === 'true' && dispatch(removeGetBalanceFailedStackblitz())); 
         }
     })
     
