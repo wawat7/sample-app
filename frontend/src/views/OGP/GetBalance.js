@@ -4,14 +4,16 @@ import { useDispatch, useSelector } from "react-redux"
 import MainLayout from '../../components/MainLayout'
 import BNICard from "../../assets/images/bni-debit-card.jpg"
 import { getBalance, resetGetBalance } from '../../stores/actions/one-gate-payment'
+import { getBalanceStackblitz, removeGetBalanceFailedStackblitz } from '../../stores/actions/stackblitz'
 
 const { Title } = Typography
 const GetBalance = () => {
     const dispatch = useDispatch()
     const { data, isLoading, success, error } = useSelector(state => state.get_balance)
     const [messageApi, contextHolder] = message.useMessage();
+    const isStackblitz = process.env.REACT_APP_ENV_STACKBLITZ
     const onGetBalance = () => {
-        dispatch(getBalance())
+        isStackblitz ? dispatch(getBalanceStackblitz()) : dispatch(getBalance())
     }
     const clear = () => {
         dispatch(resetGetBalance())
@@ -21,7 +23,8 @@ const GetBalance = () => {
             messageApi.open({
                 type: 'error',
                 content: data ? `${data.getBalanceResponse?.parameters?.responseCode} : ${data.getBalanceResponse?.parameters?.errorMessage}` : `Run Backend API First`,
-            });
+            })
+            .then(isStackblitz && dispatch(removeGetBalanceFailedStackblitz()));
         }
     })
     
