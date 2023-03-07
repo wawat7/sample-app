@@ -65,3 +65,12 @@ Great job on completing our sample application module. What you have done so far
 3. Restart the backend server using the command ctrl+C, then npm start.
 4. Restart the frontend server using the command ctrl+C, then npm start.
 5. Go back to the One Gate Payment menu and click Get Balance again. The balance that appears now comes directly from our Sandbox.
+
+## Behind the Process
+1. If you look at the file `/backend/app/services/bni/oneGatePayment.service.js`, you will see that we have already used our npm library by calling it on line 9
+`const { BNIClient, OneGatePayment } = require("bni-nodejs");`
+Then we plug in all the keys, and use one of the services in that npm which is ogp.getBalance
+2. To see other services, you can open this document.
+
+## Use Our Library
+Kami sudah memiliki beberapa library yang ...
