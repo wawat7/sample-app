@@ -14,8 +14,8 @@ In addition to simulating the one gate payment feature, this sample app also inc
 
 _Before running the sample app, please ensure that you have registered on our API Portal website and created a sample application. This will allow you to generate a secret key that is required to authenticate your API requests._
 
-
-### ✅ How to register application in BNI Portal
+---
+## How to register application in BNI Portal
 
 1. Open [https://digitalservices.bni.co.id/en/](https://digitalservices.bni.co.id/en/) , click `Register/Login` , and ```Register Here```
 2. Fill all the information and click `Sign Up`
@@ -31,6 +31,13 @@ _Before running the sample app, please ensure that you have registered on our AP
 6. You will redirect to review page, and click finish.
 7. Edit your application , click Authentication, generate your API Key and public OAuth, system will generete along with the secret number
    ![Untitled](https://lh3.googleusercontent.com/pw/AMWts8AvTB6yZXgc2g6qERCmYTiTj7V3Tc8XWFgAcvF7YrZ_byqJJBfi1eUdacy5kZtfgWXNpgu6s9NT0qWAjNq4o7KrHxrGrVhmQKxogQoAKKzo2Dd9dlpf5RK-lVubmkEWfBwkv7J3xFGDmPaOf-90IEs=w2790-h1016-no?authuser=1)
+
+
+### Backend
+1. Clone repository in [github.com/xxx](github.com/xxx)
+2. Go to folder backend
+Create new file .env
+Content .env same with .env.example
 8. Open .env file in directory backend/.env and change below records
 
    - BNI_APP_NAME = Application Name
@@ -38,6 +45,21 @@ _Before running the sample app, please ensure that you have registered on our AP
    - BNI_API_SECRET = API SECRET KEY
    - BNI_CLIENT_ID = OAuth Credentials Client ID
    - BNI_CLIENT_SECRET= OAuth Credentials Secret Number
+Modify .env with your credential BNI
+Install dependency with command :
+npm install
+Run application backend with command:
+npm start
+Frontend
+Go to frontend
+Create new file .env
+Content .env same with .env.example
+Modify .env with backend url
+Install dependency :
+npm install
+Run your application frontend :
+npm start
+
 
 9. Click Add terminal in stackblitz and type `cd backend/` enter
 10. Type `npm install` enter, `npm start` enter , and your backend will be run, you might see your backend is at your right terminal

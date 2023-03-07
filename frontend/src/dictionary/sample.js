@@ -10,10 +10,10 @@ export const KEY_GET_BALANCE = [
 
 export const KEY_STACKBLITZ = [
     {
-        bni_app_name : "Stackblitz",
-        bni_api_key : "3af87ef1-2102-4280-af27-e29a21ba6815",
-        bni_api_secret : "7ae2a3c1-68ff-43f3-9db4-5f7acb468265",
-        bni_client_id : "f87a4b6e-b225-4851-9c25-fbdfa292bb75",
-        bni_client_secret : "c9dace72-d88e-413d-ac48-289cd0314454"
+        bni_app_name : "PORTAL",
+        bni_api_key : "b70d3c90-6764-4884-8fe7-72564c7dd3de",
+        bni_api_secret : "10e97bd5-1157-4e0c-a17a-0bd8be6ab03e",
+        bni_client_id : "7dff5a99-aedb-43d8-9704-8e95040336bc",
+        bni_client_secret : "ced09309-80d5-4974-983a-6b6d8d536b40"
     }
 ]
