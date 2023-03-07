@@ -18,50 +18,50 @@ _Before running the sample app, please ensure that you have registered on our AP
 ## How to register application in BNI Portal
 
 1. Open [https://digitalservices.bni.co.id/en/](https://digitalservices.bni.co.id/en/) , click `Register/Login` , and ```Register Here```
-2. Fill all the information and click `Sign Up`
-3. After email is verified, click Application from menu and create application
-
-![Untitled](https://lh3.googleusercontent.com/pw/AMWts8B0hTOGiY-AUSKeB7z9sxKaiUiNhmU5ri4yHedBwnf1CUJhc90y8Yj_NN-Ljq5C9ax-KxGCVKM42bnTypLLLRHgZPx4QugMhXNpUXoIXGAVD2a6IJe5cTkn1ZV-0uMwLxu6e0QKkjB5IO-VJF5FaOw=w2658-h1064-no?authuser=1)
-
-4. Fill the Application form, enable application and click next
-5. Choose API Product Sandbox you want to test, make sure you tick One Gate Payment and click next
+2. Fill all the information and click `Sign Up`, and continue to email verification
+3. After email is verified, click `Application` from menu and create application
 
 ![Untitled](https://lh3.googleusercontent.com/pw/AMWts8D5AIJeju2KsHoMXXxi8n_8LWI18Q1QHswZMpulhm2Dargh1uEruuXdXSH6duu7Z0PHP3df9Wlp0mZvwnAdc012OX8uenEl1VFGma4mnj3UYHiOtPj1ID4mcY2zcQ9DBd5QXYIq2XSKSR98bi7CS8I=w2800-h620-no?authuser=1)
 
+4. Fill the Application form, enable application and click next
+5. Choose API Product Sandbox you want to test, make sure you tick `One Gate Payment` and click next
+
+![Untitled](https://lh3.googleusercontent.com/pw/AMWts8B0hTOGiY-AUSKeB7z9sxKaiUiNhmU5ri4yHedBwnf1CUJhc90y8Yj_NN-Ljq5C9ax-KxGCVKM42bnTypLLLRHgZPx4QugMhXNpUXoIXGAVD2a6IJe5cTkn1ZV-0uMwLxu6e0QKkjB5IO-VJF5FaOw=w2658-h1064-no?authuser=1)
+
 6. You will redirect to review page, and click finish.
-7. Edit your application , click Authentication, generate your API Key and public OAuth, system will generete along with the secret number
+7. Edit your application , click `Authentication`, generate your `API Key` and `public OAuth`, system will generete along with the secret number
    ![Untitled](https://lh3.googleusercontent.com/pw/AMWts8AvTB6yZXgc2g6qERCmYTiTj7V3Tc8XWFgAcvF7YrZ_byqJJBfi1eUdacy5kZtfgWXNpgu6s9NT0qWAjNq4o7KrHxrGrVhmQKxogQoAKKzo2Dd9dlpf5RK-lVubmkEWfBwkv7J3xFGDmPaOf-90IEs=w2790-h1016-no?authuser=1)
+8. Take a note of your API Key, Secret Key, OAuth Key and your OAuth Key
 
 
-### Backend
+## How to Run Backend Side
 1. Clone repository in [github.com/xxx](github.com/xxx)
 2. Go to folder backend
-Create new file .env
-Content .env same with .env.example
-8. Open .env file in directory backend/.env and change below records
+3. Open .env file in and change below records with your keys
 
    - BNI_APP_NAME = Application Name
-   - BNI_API_KEY = API KEY
-   - BNI_API_SECRET = API SECRET KEY
-   - BNI_CLIENT_ID = OAuth Credentials Client ID
-   - BNI_CLIENT_SECRET= OAuth Credentials Secret Number
-Modify .env with your credential BNI
-Install dependency with command :
-npm install
-Run application backend with command:
-npm start
-Frontend
-Go to frontend
-Create new file .env
-Content .env same with .env.example
-Modify .env with backend url
-Install dependency :
-npm install
-Run your application frontend :
-npm start
+   - BNI_API_KEY = YOUR API KEY
+   - BNI_API_SECRET = YOUR API SECRET KEY
+   - BNI_CLIENT_ID = Your OAuth Credentials Client ID
+   - BNI_CLIENT_SECRET= Your OAuth Credentials Secret Number
+
+4. Still in folder backend, install dependency with command `npm install` 
+5. Run application backend with command `npm start`
+
+## How to Run Frontend Side
+1. Go to folder frontend
+2. Install dependency with command `npm install`
+3. Run your application frontend with command `npm start`
+4. By default your browser will open localhost:3000
+5. You may click `One Gate Payment` menu
+6. Click `Get Balance` and balance will be updated.
 
 
-9. Click Add terminal in stackblitz and type `cd backend/` enter
-10. Type `npm install` enter, `npm start` enter , and your backend will be run, you might see your backend is at your right terminal
-    ![untitled](https://lh3.googleusercontent.com/pw/AMWts8B2lyz6zvzASBKJYXVpEJaPtHdzBdwH2PtR_IIqtao9Dfab294HzFvs7bQtaDbgmfkM3JTOuAmOBbdz7r0__Wzo046bmuCeh4lrZwR1uQoflVtDh6n1BrHtTXttjedSsxTY-7X4Li7g9-ndq5tgmK4=w1352-h428-no?authuser=1)
-11. Click Get Balance and you will get the balance straight from our sandbox
+## Additional Information
+Great job on completing our sample application module. What you have done so far is simulate what happens when you click the Get Balance button, where the response you received came from our provided sample front-end, which is IDR 1,000,000. In order to make the balance response truly come from our sandbox, there are a few additional steps that need to be taken:
+
+1. Open the .env file in the frontend folder.
+2. Change this one line to REACT_APP_ENV_STACKBLITZ=false.
+3. Restart the backend server using the command ctrl+C, then npm start.
+4. Restart the frontend server using the command ctrl+C, then npm start.
+5. Go back to the One Gate Payment menu and click Get Balance again. The balance that appears now comes directly from our Sandbox.
