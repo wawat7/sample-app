@@ -70,7 +70,4 @@ Great job on completing our sample application module. What you have done so far
 1. If you look at the file `/backend/app/services/bni/oneGatePayment.service.js`, you will see that we have already used our npm library by calling it on line 9
 `const { BNIClient, OneGatePayment } = require("bni-nodejs");`
 Then we plug in all the keys, and use one of the services in that npm which is ogp.getBalance
-2. To see other services, you can open this document.
-
-## Use Our Library
-Kami sudah memiliki beberapa library yang ...
+2. To see other services, you can open [NPM BNI Documentation](https://www.npmjs.com/package/bni-nodejs)
